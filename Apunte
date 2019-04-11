@@ -1,1 +1,26 @@
+•	Conectar
+•	Preparar
+•	Ejecutar
 
+•	Conectar
+o	Necesitamos un objeto de tipo connection
+o	laConexionInsertar = getConnection();
+
+•	Preparar
+o	Necesitas un prepared statement y un resul set globales
+o	Necesitamos un try catch
+o	En el prepared statement preparamos la consulta
+o	ps = laConexionInsertar.prepareStatement (”select * from persona where clave=?”);
+o	El programa no sabe que datos va a buscar
+o	Se los vamos a establecer con el método set
+o	ps.setString(1, cajaClave.getText());
+o	
+
+•	Ejecutar
+o	El result set se utiliza simpre y cuando vayas a obtener algo de la base de datos
+o	rs = ps.executeQuery(); ///Ejecutamos la busqueda
+o	if (resultado>0) //exito else //algo fallo
+
+
+Execute update No obtenemos nada
+Execute Query Si obtenbemos algo
